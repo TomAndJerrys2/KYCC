@@ -1,9 +1,5 @@
 // Kyle Brady Copright @ 2025
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-
 #include "kycc.h"
 
 bool enable_warning = true;

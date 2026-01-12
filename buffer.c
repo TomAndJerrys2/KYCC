@@ -1,7 +1,6 @@
 // By Kyle Brady @ 2025
 
 #include <ctype.h>
-#include <stdarg.h>
 #include "kycc.h"
 
 // * Initial size for the allocation buffer *
