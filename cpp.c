@@ -1,17 +1,9 @@
 // Kyle Brady @ 2025
 
 #include <ctype.h>
-#include <libgen.h>
 #include <locale.h>
-#include <stdlib.h>
-#include <string.h>
 #include <time.h>
-#include <unistd.h>
-
 #include "kycc.h"
-
-// Making use of David Prossers C/C++ Directive solutions
-// Also inspired by my goat Terry Davis
 
 static Map *macros = &EMPTY_MAP;
 static Map *once = &EMPTY_MAP;
