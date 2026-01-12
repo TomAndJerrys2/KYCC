@@ -6,9 +6,10 @@
 #ifndef KYCC_H
 #define KYCC_H
 
-#include <errrno.h>
+#include <errno.h>
 #include <assert.h>
 #include <inttypes.h>
+#include <glob.h>
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdnoreturn.h>
@@ -78,8 +79,6 @@
 #define __restrict__ restrict
 #define __restrict restrict
 #define __volatile__ volatile
-
-#endif
 
 // character assigned structures
 typedef unsigned short char16_t;
@@ -215,9 +214,9 @@ enum {
     OP_LABEL_ADDR,
 #define op(name, _) name,
 #define keyword(name, x, y) name,
-#include "keyword.inc"
 #undef keyword
 #undef op
+
 };
 
 enum {
@@ -500,4 +499,4 @@ Vector *vec_reverse(Vector *vec);
 void *vec_body(Vector *vec);
 int vec_len(Vector *vec);
 
-
+#endif

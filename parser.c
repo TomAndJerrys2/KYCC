@@ -3,10 +3,7 @@
 // Recurisve AST-Parser Model
 
 #include <ctype.h>
-#include <errno.h>
 #include <limits.h>
-#include <stdlib.h>
-#include <string.h>
 #include <strings.h>
 
 #include "kycc.h"
@@ -480,7 +477,6 @@ static bool is_type(Token *tok) {
     switch (tok->id) {
 #define op(x, y)
 #define keyword(id, _, istype) case id: return istype;
-#include "keyword.inc"
 #undef keyword
 #undef op
         default:
