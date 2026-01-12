@@ -1,22 +1,15 @@
 // Kyle Brady @ 2025
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
 
 #include <arena.h>
-
 #include "kycc.h"
 
 bool dumpstack = false;
 bool dumpsource = true;
 
-#define BUFFER_SIZE(n) void return_buffer(size_t n) { /
-			(Arena*)my_arena = (Arena**)context_alloc(n); /
-			fprintf(stderr, "Arena allocated"); /
+// #define BUFFER_SIZE(n) void return_buffer(size_t n) { /
+//			(Arena*)my_arena = (Arena**)context_alloc(n); /
+//			fprintf(stderr, "Arena allocated"); /
 
 
 static char *VM_SPECIAL_REGISTERS[] = {};

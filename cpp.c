@@ -2,7 +2,6 @@
 
 #include <ctype.h>
 #include <locale.h>
-#include <time.h>
 #include "kycc.h"
 
 static Map *macros = &EMPTY_MAP;

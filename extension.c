@@ -1,6 +1,5 @@
 // Kyle Brady @ 2025
 
-#include <string.h>
 #include "kycc.h"
 
 char *get_base_file(void) { return NULL; }
