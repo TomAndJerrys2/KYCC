@@ -2,9 +2,6 @@
 
 #include <ctype.h>
 #include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "kycc.h"
 
 // * Initial size for the allocation buffer *
