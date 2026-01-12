@@ -2,7 +2,8 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "8cc.h"
+
+#include "kycc.h"
 
 #define INIT_SIZE 16
 #define TOMBSTONE ((void *)-1)
