@@ -5,7 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "8cc.h"
+#include "kycc.h"
 
 // Returns the shortest path for the given full path to a file.
 static char *clean(char *p) {
