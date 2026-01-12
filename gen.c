@@ -7,11 +7,19 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#include <arena.h>
+
 #include "kycc.h"
 
 bool dumpstack = false;
 bool dumpsource = true;
 
+#define BUFFER_SIZE(n) void return_buffer(size_t n) { /
+			(Arena*)my_arena = (Arena**)context_alloc(n); /
+			fprintf(stderr, "Arena allocated"); /
+
+
+static char *VM_SPECIAL_REGISTERS[] = {};
 static char *REGS[] = {"rdi", "rsi", "rdx", "rcx", "r8", "r9"};
 static char *SREGS[] = {"dil", "sil", "dl", "cl", "r8b", "r9b"};
 static char *MREGS[] = {"edi", "esi", "edx", "ecx", "r8d", "r9d"};
@@ -515,9 +523,13 @@ static void emit_comp(char *inst, char *usiginst, Node *node) {
     emit("movzb #al, #eax");
 }
 
+
+// Big -> Little endian based on special instruction
+// pushed to the stack in the arena allocation
 static void emit_binop_int_arith(Node *node) {
     SAVE;
     char *op = NULL;
+
     switch (node->kind) {
         case '+': op = "add"; break;
         case '-': op = "sub"; break;
@@ -526,7 +538,8 @@ static void emit_binop_int_arith(Node *node) {
         case OP_SAL: op = "sal"; break;
         case OP_SAR: op = "sar"; break;
         case OP_SHR: op = "shr"; break;
-        case '/': case '%': break;
+	case OP_ENDIAN: op = "end"; break;
+	case '/': case '%': break;
         default: error("kycc: invalid operator '%d'", node->kind);
     }
     emit_expr(node->left);

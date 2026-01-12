@@ -1,15 +1,8 @@
-#include <libgen.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <unistd.h>
-
 // Kyles C Compiler
 // GNU Linux and Windows Compatible C Compiler
 
 // Main Header
-include "kycc.h"
+#include "kycc.h"
 
 // Compiler file resolutions
 static char* input_file;
