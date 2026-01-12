@@ -2,7 +2,8 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "8cc.h"
+
+#include "kycc.h"
 
 Set *set_add(Set *s, char *v) {
     Set *r = malloc(sizeof(Set));
