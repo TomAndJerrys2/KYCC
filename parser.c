@@ -8,7 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include "8cc.h"
+
+#include "kycc.h"
 
 // The largest alignment requirement on x86-64. When we are allocating memory
 // for an array whose type is unknown, the array will be aligned to this
