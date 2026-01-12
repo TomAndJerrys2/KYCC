@@ -1,8 +1,4 @@
 // Kyles null pointer sets
-
-#include <stdlib.h>
-#include <string.h>
-
 #include "kycc.h"
 
 Set *set_add(Set *s, char *v) {

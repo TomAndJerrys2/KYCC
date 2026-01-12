@@ -1,8 +1,4 @@
 // Kyles HashTable
-
-#include <stdlib.h>
-#include <string.h>
-
 #include "kycc.h"
 
 #define INIT_SIZE 16

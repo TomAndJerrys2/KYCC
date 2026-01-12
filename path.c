@@ -1,10 +1,6 @@
 // Kyle Brady @ 2025
 
-#include <errno.h>
 #include <limits.h>
-#include <string.h>
-#include <unistd.h>
-
 #include "kycc.h"
 
 // Returns the shortest path for the given full path to a file.

@@ -1,6 +1,4 @@
 // Copyright 2012 Rui Ueyama. Released under the MIT license.
-
-#include <stdlib.h>
 #include "kycc.h"
 
 Dict *make_dict() {
